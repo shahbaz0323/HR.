@@ -1,6 +1,6 @@
 import { FormEvent, useEffect, useMemo, useState } from 'react';
 import { supabase } from './lib/supabase';
-import { Activity, ArrowUpRight, CalendarDays, Check, ChevronDown, Clock3, Coffee, LayoutDashboard, Menu, MoreHorizontal, Plus, Search, Settings2, ShieldCheck, Users, X } from 'lucide-react';
+import { Activity, ArrowUpRight, CalendarDays, Check, ChevronDown, Clock3, Coffee, LayoutDashboard, Menu, MoveHorizontal as MoreHorizontal, Plus, Search, Settings2, ShieldCheck, Users, X } from 'lucide-react';
 
 type Department = { id: string; name: string; description: string; color: string };
 type Employee = { id: string; first_name: string; last_name: string; email: string; phone: string; job_title: string; department_id: string | null; employment_type: string; status: string; start_date: string; location: string; salary: number; avatar_color: string; departments?: { name: string; color: string } | null };
@@ -110,3 +110,6 @@ function LeaveForm({ employees, onClose, onSaved }: { employees: Employee[]; onC
 function Modal({ title, onClose, children }: { title: string; onClose: () => void; children: React.ReactNode }) { return <div className="modal-backdrop" onMouseDown={(event) => { if (event.target === event.currentTarget) onClose(); }}><div className="modal"><div className="modal-header"><h2>{title}</h2><button onClick={onClose}><X size={18} /></button></div>{children}</div></div>; }
 
 export default App;
+
+
+export default App
