@@ -111,5 +111,4 @@ function Modal({ title, onClose, children }: { title: string; onClose: () => voi
 
 export default App;
 
-
 export default App
