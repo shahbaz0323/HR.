@@ -110,5 +110,3 @@ function LeaveForm({ employees, onClose, onSaved }: { employees: Employee[]; onC
 function Modal({ title, onClose, children }: { title: string; onClose: () => void; children: React.ReactNode }) { return <div className="modal-backdrop" onMouseDown={(event) => { if (event.target === event.currentTarget) onClose(); }}><div className="modal"><div className="modal-header"><h2>{title}</h2><button onClick={onClose}><X size={18} /></button></div>{children}</div></div>; }
 
 export default App;
-
-export default App
